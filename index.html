@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship task- KREENA</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Genos:wght@100&display=swap" rel="stylesheet">
+    <style>
+        /* css reset */
+     /* .container {
+        /* border: 2px solid rgb(208, 250, 250) ; */
+        /* display: block;
+        width: 70%; */
+        /* margin: 82px auto; */
+        /* margin: 30px 48px 22px 180px;
+        border-radius: 10px;
+        text-align: center; */
+        /* background: rgba(20, 20, 20, .2); */
+        /* background-image: url('2.png');
+        
+        animation: zoomin 1s linear 1;
+        animation-delay: 4s;
+        visibility: hidden; */
+        /* animation-fill-mode: forwards;
+        overflow: hidden; */
+        /* }  */
+        .container {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 65%;
+            background-image: url('2.png');
+            background-size: 100% 100%;
+            box-shadow: 1px 2px 20px rgba(0, 0, 0, .9);
+            animation: slider 12s infinite linear;
+        }
+
+        @keyframes slider {
+            0% {
+                background-image: url('2.png');
+                background-size: 100% 100%;
+            }
+
+            35% {
+                background-image: url('3.png');
+                background-size: 100% 100%;
+            }
+
+            70% {
+                background-image: url('4.png');
+                background-size: 100% 100%;
+            }
+        }
+
+        @keyframes zoomin {
+            0% {
+                transform: scale(0.5);
+                visibility: visible;
+            }
+
+            100% {
+                transform: scale(1);
+                visibility: visible;
+            }
+        }
+
+        .left {
+            display: inline-block;
+            /* border: 2px solid rgb(214, 238, 169); */
+            position: absolute;
+            left: 34px;
+            top: 48px;
+            animation: movedown 1s linear 1;
+            animation-delay: 1s;
+            /* opacity: ; */
+            /* /* visibility: hidden; */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes movedown {
+            0% {
+                transform: translateY(-100px);
+                visibility: visible;
+            }
+
+            100% {
+                transform: translateY(0px);
+                visibility: visible;
+            }
+        }
+
+        .left img {
+            width: 155px;
+            /* opacity: 0.; */
+        }
+
+        .left div {
+            text-align: center;
+            font-size: 12px;
+            line-height: 18px;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .center {
+            display: block;
+            /* margin: 22px auto;
+         */
+            margin: 22px 9px 20px 460px;
+            width: 55%;
+            /* do margin auto whenever you want anything in middle  */
+            /* border: 2px solid rgb(232, 232, 240); */
+            top: 10px;
+            /* position: fixed; */
+            position: relative;
+            animation: movedown 1s linear 1;
+            animation-delay: 2s;
+            visibility: hidden;
+            animation-fill-mode: forwards;
+            font-size: 10px;
+
+        }
+
+        /* .right {
+        display: inline-block;
+        /* border: 2px solid rgb(88, 225, 243); */
+        /* position: absolute;
+        right: 34px;
+        top: 55px;
+        animation: movedown 1s linear 1; */
+        /* animation-delay: 3s; */
+        /* opacity: ; */
+        /* visibility: hidden; */
+        /* animation-fill-mode: forwards; */
+        /* } */
+
+        .navbar {
+            display: inline-block;
+            /* font-size: 20px; */
+
+        }
+
+        .navbar li {
+            display: inline-block;
+
+        }
+
+        .navbar li a {
+            /* display: inline-block; */
+            font-size: 20px;
+            text-decoration: none;
+            color: rgb(7, 7, 7);
+            padding: 10px 5px;
+        }
+
+        .navbar li a:hover {
+            /* .navbar li a.active  */
+            text-decoration: underline;
+            color: rgb(243, 115, 11);
+        }
+
+        .btn {
+            margin: 0px 8px;
+            padding: 0px 15px;
+            background: rgb(100, 99, 99);
+            color: rgb(243, 161, 39);
+            border: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            /* font-family: 'Patrick Hand', cursive; */
+            font-family: 'Chakra Petch', sans-serif;
+            position: relative;
+            /* text-decoration-color: coral; */
+        }
+
+        .btn:hover {
+            background: rgb(243, 100, 18);
+        }
+
+        .form-group input {
+            display: block;
+            text-align: center;
+            width: 170px;
+            padding: 2px;
+            border: 2px solid black;
+            margin: 12px auto;
+            font-size: 20px;
+            border-radius: 8px;
+            /* font-family: 'Patrick Hand', cursive; */
+            font-family: 'Chakra Petch', sans-serif;
+            position: relative;
+        }
+
+        /* .container button {
+        width: 125px;
+        margin: 31px auto;
+        color: coral; */
+        /* position: relative; */
+        /* border: 2px solid floralwhite; */
+        /* } */
+
+        /* .bgimg::before {
+        content: "";
+        background: url('https://media.istockphoto.com/photos/schoolgirl-studying-with-video-online-lesson-at-home-picture-id1285962627?b=1&k=20&m=1285962627&s=170667a&w=0&h=PaplJh7fQhrHOoprLvDP9HbMMER9jo74_jcQSGXryWg=');
+        background-repeat: no-repeat;
+        padding: 50px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        background-size: cover;
+        /* background: rgba(red, green, blue, alpha); */
+        /* opacity: 0.75; */
+        /* } */
+
+        h1 {
+            position: relative;
+            color: black;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+
+        h3 {
+            position: relative;
+            /* color: black; */
+            text-align: center;
+            color: rgb(243, 115, 11);
+            margin: 3% 10% 10% 10%;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+
+        .foot1 {
+            /* border: 2px solid; */
+            padding: 0px 90px 0px 90px;
+            /* display: inline-block; */
+            display: table-cell;
+            margin: 22px auto;
+            width: 36%;
+            /* font-family: 'Cookie', cursive; */
+            font-size: 35px;
+            animation: moveup 1s linear 1;
+            animation-delay: 5s;
+            visibility: hidden;
+            animation-fill-mode: forwards;
+            /* transform: rotate(-90deg); */
+        }
+
+        @keyframes moveup {
+            0% {
+                transform: translateY(100px);
+                visibility: visible;
+            }
+
+            100% {
+                transform: translateY(0px);
+                visibility: visible;
+            }
+        }
+
+        .bottembar li a {
+            font-size: 14px;
+            /* text-decoration: none; */
+            /* color: white; */
+            padding: -1px 10px;
+            display: inline-block;
+        }
+
+        .bottembar {
+            display: block;
+            margin: -8px auto;
+            width: 54%;
+            bottom: 22px;
+            position: relative;
+        }
+
+        .bottembar li {
+            display: inline-block;
+            margin: 30px -30px -6px 0px;
+        }
+
+        .bottembar li a img {
+            /* width: 50px; */
+            display: inline-block;
+            margin: 25px;
+        }
+
+        .bottembar div {
+            text-align: center;
+            float: left;
+            padding: 19px;
+            margin: 34px -20px -6px 10px;
+            font-size: 20px;
+            /* border: 2px double black; */
+            color: black;
+            text-decoration: underline;
+            position: relative;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+
+        .words {
+            /* padding: 0px 108px 15px 44px;  */
+            position: relative;
+            /* float: 20px; */
+            float: right;
+            /* box-sizing: border-box; */
+        }
+
+        .words h1 {
+            color: black;
+            padding: 400px 10px 0px 50px;
+            /* text-decoration: underline; */
+            margin: 0px;
+            font-family: 'Genos', sans-serif;
+            font-size: 45px;
+        }
+
+        .h {
+            color: rgb(240, 124, 16);
+            /* padding: 10px 100px 10px 10px; */
+            /* text-decoration: underline; */
+            padding-left: 50px;
+            /* float: right; */
+            text-align: left;
+            font-size: 45px;
+            margin: 0px;
+            font-family: 'Genos', sans-serif;
+        }
+
+        .words h2 {
+            color: rgb(8, 8, 8);
+            /* padding: 400px 10px 10px 10px; */
+            /* text-decoration: underline; */
+            padding-left: 50px;
+            margin: 0px;
+            font-family: 'Genos', sans-serif;
+            font-size: 45px;
+        }
+
+        .left1 p {
+            color: rgb(8, 8, 8);
+            padding: 1px 60px 10px 30px;
+            /* display: inline-block; */
+            font-size: 20px;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+
+        /* border: 2px solid black; */
+        /* } 
+    .cont span {
+        text-transform: uppercase;
+        display: block;
+    }
+
+    /* .cont{
+        transform: translate(-50%, -50%);
+    } */
+        .text1 {
+            color: black;
+        }
+
+        .text2 {
+            animation: texts 2s 1;
+        }
+
+        @keyframes texts {
+            0% {
+                color: rgb(221, 100, 29);
+                margin-bottom: -40px;
+            }
+
+            50% {
+                letter-spacing: 10px;
+                margin-bottom: -40px;
+            }
+
+            /* 70%{
+            letter-spacing: 8px;
+            margin-bottom: -40px;
+        } */
+        }
+
+        .right1 img {
+            width: 200px;
+            padding: 20px 25px 10px 10px;
+            margin: -12px;
+            /* clip-path: circle(); */
+            /* padding-top: 20px; */
+        }
+
+        .right1 {
+            /* border: 2px solid black; */
+            padding: 0px 108px 15px 44px;
+            /* display: inline-block; */
+            /* float: 20px; */
+            float: right;
+        }
+
+        .left1 {
+            margin: -40px auto;
+            display: inline-block;
+            padding: 26px 27px 0px 72px;
+            text-decoration: none;
+            /* border: 2px solid black; */
+            /* color: rgb(8, 8, 8); */
+
+        }
+
+        .left2 p {
+            /* border: 2px solid black; */
+            color: black;
+            padding: 39px 400px 10px 100px;
+            font-size: 20px;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+
+        .sol {
+            /* padding-top: 20px; */
+            padding: 100px 0px 10px 0px;
+        }
+
+        .sol h1 {
+            text-align: center;
+            /* padding-top: 50px; */
+            padding: 100px 0px 10px 0px;
+            font-family: 'Genos', sans-serif;
+            color: black;
+            font-size: 80px;
+        }
+
+        .col {
+            float: left;
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 10px -120px 10px 30px;
+            align-items: center;
+            /* box-shadow:  black; */
+        }
+
+        .sol::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .box {
+            padding-top: 100px;
+            /* animation: rigthleft 2s infinite; */
+            /* animation: zoomin 1s linear 1;
+        animation-delay: 4s;
+        /* visibility: hidden; */
+            /* animation-fill-mode: forwards; */
+            /* overflow: hidden; */
+        }
+
+        /* @keyframes zoomin{
+        0% {
+            transform: scale(0.5);
+            visibility: visible;
+        }
+
+        100% {
+            transform: scale(1);
+            visibility: visible;
+        }
+    } */
+        .pro {
+            padding: 100px 0px 0px 30px;
+        }
+
+        .waves1 {
+            background: rgb(240, 124, 16);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .waves1 h1 {
+            /* font-size: 5rem; */
+            font-family: 'Genos', sans-serif;
+            color: white;
+        }
+
+        .waves1 h2 {
+            /* font-size: 2rem; */
+            font-family: 'Genos', sans-serif;
+        }
+        .uppersvg{
+            background: #F07C10;
+        }
+        .waves1 p{
+            font-size: medium;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="bgimg"> -->
+    <header>
+        <!-- here left for logo -->
+        <div class="left">
+            <img src="https://laxtongroup.com/wp-content/uploads/2021/03/logo.svg"
+                alt="Logo of the company Fluentlearn">
+            <!-- <div>Fluentlearn</div> -->
+        </div>
+        <!-- center for navigation bar -->
+        <div class="center">
+            <ul class="navbar">
+                <li><a href="#" ::before>
+
+                        Solutions</a></li>
+                <!-- <ul class="sub-menu">
+                            <li id="menu-item" class="menu-item">
+                                <a href="#">Identity</a>
+                            </li>
+                            <li></li>
+                            <li></li>
+                        </ul> -->
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#" target="_blank">Products</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <!-- right for button -->
+
+    </header>
+    <h3>
+        <div class="cont">
+            <span class="text1">
+                Biometric solutions<br>
+            </span>
+            <span class="text2">
+                for elections, identity, security and travel.
+            </span>
+        </div>
+    </h3>
+    <div class="container">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="words">
+        <div class="left1">
+            <h1>Enabling<br></h1>
+            <div class="h">
+                <strong>Citizen Identity<br></strong>
+            </div>
+            <h2>solutions</h2>
+            <p> Laxton delivers end-to-end solutions in the Election, Citizen Identity, and Security fields. Our
+                solutions include self-designed equipment and software to register and verify citizens. The seamless
+                integration of our devices and software ensures an excellent user experience for citizens and operators
+                alike. Over the years, we have built up a team of industry-leading experts to successfully implement and
+                service our solutions, even in the harshest environments. As a result, Laxton has become a leading
+                global end-to-end provider of Election, Citizen Identity, and Security solutions.
+            </p>
+        </div>
+        <div class="right1">
+            <img src="img-02.svg" alt="image">
+        </div>
+        <div class="left2">
+            <p>
+                Laxton Group is a company that provides election, identity and self-service solutions to governments and
+                corporations. Its technologies include biometrics, big data analytics and cryptography. In addition, new
+                technologies being introduced include artificial intelligence, IoT and blockchain technology.
+            </p>
+        </div>
+    </div>
+    <div class="sol">
+        <h1>
+            Discover our solutions
+        </h1>
+        <div class="col">
+            <img src="id.png" width="70%" alt="">
+        </div>
+        <div class="col">
+            <img src="el.png" width="70%" alt="">
+        </div>
+        <div class="col">
+            <img src="sec.png" width="70%" alt="">
+        </div>
+    </div>
+    <div class="box" data-aos="zoom-in">
+        <img src="a.png" width="100%" alt="">
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                offset: 350,
+                duration: 1000
+            }
+        );
+    </script>
+    <div class="pro">
+        <img src="pro.png" width="80%" alt="">
+    </div>
+    <div class="uppersvg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,192L40,202.7C80,213,160,235,240,218.7C320,203,400,149,480,154.7C560,160,640,224,720,213.3C800,203,880,117,960,112C1040,107,1120,181,1200,176C1280,171,1360,85,1400,42.7L1440,0L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+    <div class="waves1" >
+        <h1>We are Where</h1>
+        <h2>You are!!</h2>
+        <p>
+            52 Patners in AMER | 173 Patners in EMEA | 51 Patners in APAC<br>
+            
+        </p>
+        <h2>Thanks for visiting!</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,192L40,202.7C80,213,160,235,240,218.7C320,203,400,149,480,154.7C560,160,640,224,720,213.3C800,203,880,117,960,112C1040,107,1120,181,1200,176C1280,171,1360,85,1400,42.7L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- </div> -->
+    <!-- <footer>
+        <div class="foot1">
+            <ul class="bottembar">
+                <div>Connect Us:</div>
+                <li><a href="#" target="blank"><img
+                            src=""
+                            width="30px"></a></li>
+                <li><a href="#" target="blank"><img
+                            src=""
+                            width="40px"></a></li>
+                <li><a href=""><img
+                            src=""
+                            width="40px"></a></li>
+                <li><a href=""><img src=""
+                            width="30px"></a></li>
+            </ul>
+        </div>
+    </footer> -->
+</body>
+
+</html>
